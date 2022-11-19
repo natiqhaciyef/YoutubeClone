@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.natiqhaciyef.youtubeclone.data.YoutubeVideo
+import com.natiqhaciyef.youtubeclone.data.model.YoutubeVideo
 import com.natiqhaciyef.youtubeclone.databinding.RecyclerVideosBinding
 
 class VideoAdapter(private val mContext: Context, val list: List<YoutubeVideo>): RecyclerView.Adapter<VideoAdapter.VideoHolder>(){

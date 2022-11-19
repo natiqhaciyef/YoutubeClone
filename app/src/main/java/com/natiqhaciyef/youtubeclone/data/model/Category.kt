@@ -1,4 +1,4 @@
-package com.natiqhaciyef.youtubeclone.data
+package com.natiqhaciyef.youtubeclone.data.model
 
 data class Category(
     val image: String? = null,

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.natiqhaciyef.youtubeclone.data.Category
+import com.natiqhaciyef.youtubeclone.data.model.Category
 import com.natiqhaciyef.youtubeclone.databinding.RecyclerCategoriesBinding
 
 class CategoriesAdapter(var mContext: Context, var list: List<Category>) : RecyclerView.Adapter<CategoriesAdapter.CategoryHolder>() {

@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.natiqhaciyef.youtubeclone.R
 import com.natiqhaciyef.youtubeclone.databinding.FragmentFeedBinding
-import com.natiqhaciyef.youtubeclone.data.Category
-import com.natiqhaciyef.youtubeclone.data.Channel
-import com.natiqhaciyef.youtubeclone.data.YoutubeVideo
+import com.natiqhaciyef.youtubeclone.data.model.Category
+import com.natiqhaciyef.youtubeclone.data.model.Channel
+import com.natiqhaciyef.youtubeclone.data.model.YoutubeVideo
 import com.natiqhaciyef.youtubeclone.ui.adapter.CategoriesAdapter
 import com.natiqhaciyef.youtubeclone.ui.adapter.VideoAdapter
 
@@ -45,13 +47,16 @@ class FeedFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
-        binding = FragmentFeedBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_feed ,container, false)
+
+        val categoryAdapter = CategoriesAdapter(requireContext(), categories)
+        val videoAdapter = VideoAdapter(requireContext(), videos)
+        binding.feedFragment = this
+        binding.categoryAdapter = categoryAdapter
+        binding.videoAdapter = videoAdapter
 
         binding.categoriesRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        binding.categoriesRecyclerView.adapter = CategoriesAdapter(requireContext(), categories)
 
-        binding.videosRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        binding.videosRecyclerView.adapter = VideoAdapter(requireContext(), videos)
         return binding.root
     }
 }

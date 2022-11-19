@@ -1,4 +1,6 @@
-package com.natiqhaciyef.youtubeclone.data
+package com.natiqhaciyef.youtubeclone.data.model
+
+import java.io.Serializable
 
 data class YoutubeVideo(
     val id: Int,
@@ -8,6 +10,6 @@ data class YoutubeVideo(
     val videoImage: String,
     val channelInfo: Channel,
     val views: String
-)
+): Serializable
 
 

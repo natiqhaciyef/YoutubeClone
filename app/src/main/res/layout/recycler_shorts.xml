@@ -21,28 +21,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/shorts_galaxy" />
+            app:srcCompat="@drawable/youtube_shorts_philip_lackner" />
 
         <ImageView
             android:id="@+id/optionsMenuShorts"
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="33dp"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="200dp"
             app:layout_constraintTop_toTopOf="@id/shortsImageView"
             app:layout_constraintBottom_toTopOf="@+id/likeButtonShorts"
             app:layout_constraintEnd_toEndOf="@+id/shortsImageView"
-            app:layout_constraintHorizontal_bias="0.930"
+            app:layout_constraintHorizontal_bias="0.950"
             app:layout_constraintStart_toStartOf="@+id/shortsImageView"
             app:srcCompat="@drawable/shorts_menu" />
 
         <ImageView
             android:id="@+id/likeButtonShorts"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:src="@drawable/shorts_likebutton"
+            android:src="@drawable/shorts_like"
             app:layout_constraintEnd_toEndOf="@+id/shortsImageView"
-            app:layout_constraintHorizontal_bias="0.930"
+            app:layout_constraintHorizontal_bias="0.936"
             app:layout_constraintStart_toStartOf="@id/shortsImageView"
             app:layout_constraintTop_toBottomOf="@+id/optionsMenuShorts" />
 
@@ -50,22 +50,22 @@
             android:id="@+id/likeCountText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-7dp"
+            android:layout_marginTop="5dp"
             android:text="1092"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/shortsImageView"
-            app:layout_constraintHorizontal_bias="0.899"
+            app:layout_constraintHorizontal_bias="0.934"
             app:layout_constraintStart_toStartOf="@id/shortsImageView"
             app:layout_constraintTop_toBottomOf="@+id/likeButtonShorts" />
 
         <ImageView
             android:id="@+id/dislikeButtonShorts"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="24dp"
-            android:src="@drawable/shorts_dislikebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/shorts_dislike"
             app:layout_constraintEnd_toEndOf="@id/shortsImageView"
-            app:layout_constraintHorizontal_bias="0.901"
+            app:layout_constraintHorizontal_bias="0.936"
             app:layout_constraintStart_toStartOf="@id/shortsImageView"
             app:layout_constraintTop_toBottomOf="@+id/likeCountText" />
 
@@ -73,23 +73,22 @@
             android:id="@+id/dislikeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="5dp"
             android:text="Dislike"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/shortsImageView"
-            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintHorizontal_bias="0.947"
             app:layout_constraintStart_toStartOf="@id/shortsImageView"
             app:layout_constraintTop_toBottomOf="@+id/dislikeButtonShorts" />
 
         <ImageView
             android:id="@+id/commentShorts"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="25dp"
-            android:rotationY="180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
             android:src="@drawable/shorts_comment"
             app:layout_constraintEnd_toEndOf="@id/shortsImageView"
-            app:layout_constraintHorizontal_bias="0.901"
+            app:layout_constraintHorizontal_bias="0.936"
             app:layout_constraintStart_toStartOf="@id/shortsImageView"
             app:layout_constraintTop_toBottomOf="@+id/dislikeText" />
 
@@ -97,10 +96,11 @@
             android:id="@+id/commentCountText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="12"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/shortsImageView"
-            app:layout_constraintHorizontal_bias="0.881"
+            app:layout_constraintHorizontal_bias="0.916"
             app:layout_constraintStart_toStartOf="@id/shortsImageView"
             app:layout_constraintTop_toBottomOf="@id/commentShorts" />
 
@@ -108,36 +108,35 @@
             android:id="@+id/shareText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="5dp"
             android:text="Share"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/shortsImageView"
-            app:layout_constraintHorizontal_bias="0.901"
+            app:layout_constraintHorizontal_bias="0.936"
             app:layout_constraintStart_toStartOf="@id/shortsImageView"
             app:layout_constraintTop_toBottomOf="@+id/shareShorts" />
 
         <ImageView
             android:id="@+id/shareShorts"
-            android:layout_width="37dp"
-            android:layout_height="37dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:rotationY="180"
             android:src="@drawable/shorts_share"
             app:layout_constraintEnd_toEndOf="@id/shortsImageView"
-            app:layout_constraintHorizontal_bias="0.901"
+            app:layout_constraintHorizontal_bias="0.936"
             app:layout_constraintStart_toStartOf="@id/shortsImageView"
             app:layout_constraintTop_toBottomOf="@+id/commentCountText" />
 
 
         <ImageView
             android:id="@+id/shortsSubscribeButton"
-            android:layout_width="100dp"
-            android:layout_height="20dp"
-            android:layout_marginEnd="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/shareText"
+            app:layout_constraintStart_toEndOf="@+id/userNameText"
             app:layout_constraintTop_toTopOf="@+id/shareText"
-            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintVertical_bias="0.695"
             app:srcCompat="@drawable/shorts_subscribe" />
 
         <ImageView
@@ -157,14 +156,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Philip Lackner"
+            android:layout_marginStart="15dp"
             android:textColor="@color/white"
 
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/shortsSubscribeButton"
             app:layout_constraintHorizontal_bias="0.29"
             app:layout_constraintStart_toEndOf="@+id/userProfileIcon"
             app:layout_constraintTop_toTopOf="@+id/userProfileIcon"
             app:layout_constraintVertical_bias="0.23" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0.78"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shortsSubscribeButton"
+            app:layout_constraintTop_toBottomOf="@+id/shareText"
+            app:srcCompat="@drawable/shorts_song" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
