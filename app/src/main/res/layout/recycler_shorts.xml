@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="short"
+            name="shorts"
             type="com.natiqhaciyef.youtubeclone.data.model.YoutubeShorts" />
 
     </data>
@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="1092"
+                android:text="@{shorts.likeCount}"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@id/shortsImageView"
                 app:layout_constraintHorizontal_bias="0.934"
@@ -106,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="12"
+                android:text="@{shorts.commentCount}"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@id/shortsImageView"
                 app:layout_constraintHorizontal_bias="0.916"
@@ -149,7 +149,7 @@
                 app:srcCompat="@drawable/shorts_subscribe" />
 
             <ImageView
-                android:id="@+id/userProfileIcon"
+                android:id="@+id/userProfileIconShorts"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:src="@drawable/philip_lackner"
@@ -170,8 +170,8 @@
 
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0.29"
-                app:layout_constraintStart_toEndOf="@+id/userProfileIcon"
-                app:layout_constraintTop_toTopOf="@+id/userProfileIcon"
+                app:layout_constraintStart_toEndOf="@+id/userProfileIconShorts"
+                app:layout_constraintTop_toTopOf="@+id/userProfileIconShorts"
                 app:layout_constraintVertical_bias="0.23" />
 
             <ImageView

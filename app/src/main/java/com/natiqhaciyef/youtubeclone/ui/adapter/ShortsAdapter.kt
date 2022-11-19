@@ -9,7 +9,7 @@ import com.natiqhaciyef.youtubeclone.R
 import com.natiqhaciyef.youtubeclone.data.model.YoutubeShorts
 import com.natiqhaciyef.youtubeclone.databinding.RecyclerShortsBinding
 
-class ShortsAdapter(val mContext: Context, val list: List<YoutubeShorts>) :
+class ShortsAdapter(private val mContext: Context, val list: List<YoutubeShorts>) :
     RecyclerView.Adapter<ShortsAdapter.ShortsHolder>() {
 
     inner class ShortsHolder(val binding: RecyclerShortsBinding) :
@@ -25,7 +25,22 @@ class ShortsAdapter(val mContext: Context, val list: List<YoutubeShorts>) :
         val itemView = holder.binding
         val short = list[position]
 
-        itemView.short = short
+        itemView.shortsImageView.setImageResource(
+            mContext.resources.getIdentifier(
+                short.image,
+                "drawable",
+                mContext.packageName
+            )
+        )
+        itemView.userProfileIconShorts.setImageResource(
+            mContext.resources.getIdentifier(
+                short.channel.image,
+                "drawable",
+                mContext.packageName
+            )
+        )
+
+        itemView.shorts = short
     }
 
     override fun getItemCount(): Int = list.size
