@@ -1,101 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/videoImageView"
+    <data>
+        <variable
+            name="video"
+            type="com.natiqhaciyef.youtubeclone.data.model.YoutubeVideo" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/amerikali_aynasiz_video"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="300dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/videoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/amerikali_aynasiz_video"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ImageView
-        android:id="@+id/timeBackground"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/time_background"
-        app:layout_constraintBottom_toBottomOf="@id/videoImageView"
-        app:layout_constraintEnd_toEndOf="@+id/videoImageView"
-        app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="@+id/videoImageView"
-        app:layout_constraintTop_toTopOf="@id/videoImageView"
-        app:layout_constraintVertical_bias="0.95" />
+        <ImageView
+            android:id="@+id/timeBackground"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/time_background"
+            app:layout_constraintBottom_toBottomOf="@id/videoImageView"
+            app:layout_constraintEnd_toEndOf="@+id/videoImageView"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="@+id/videoImageView"
+            app:layout_constraintTop_toTopOf="@id/videoImageView"
+            app:layout_constraintVertical_bias="0.95" />
 
 
-    <TextView
-        android:id="@+id/videoTimeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1:12:12"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/timeBackground"
-        app:layout_constraintStart_toStartOf="@id/timeBackground"
-        app:layout_constraintEnd_toEndOf="@id/timeBackground"
-        app:layout_constraintTop_toTopOf="@id/timeBackground"
-        />
+        <TextView
+            android:id="@+id/videoTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1:12:12"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/timeBackground"
+            app:layout_constraintStart_toStartOf="@id/timeBackground"
+            app:layout_constraintEnd_toEndOf="@id/timeBackground"
+            app:layout_constraintTop_toTopOf="@id/timeBackground" />
 
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/userProfileImageView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:src="@drawable/amerikali_aynasiz"
-        app:shapeAppearanceOverlay="@style/RoundedSquare"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoImageView"
-        />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userProfileImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/amerikali_aynasiz"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoImageView" />
 
 
-    <TextView
-        android:id="@+id/videoTitleTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:text="AMERİKA'NIN EN AKIL-ALMAZ 5 YASASI! ŞAKA GİBİ…"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/verticalOptionsImageView"
-        app:layout_constraintStart_toEndOf="@+id/userProfileImageView"
-        app:layout_constraintTop_toBottomOf="@+id/videoImageView" />
+        <TextView
+            android:id="@+id/videoTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@{video.title}"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/verticalOptionsImageView"
+            app:layout_constraintStart_toEndOf="@+id/userProfileImageView"
+            app:layout_constraintTop_toBottomOf="@+id/videoImageView" />
 
 
-    <TextView
-        android:id="@+id/videoInfoTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="Amerikali Aynasiz - 39k views - 9 days ago"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/verticalOptionsImageView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/videoTitleTextView"
-        app:layout_constraintTop_toBottomOf="@+id/videoTitleTextView"
-        app:layout_constraintVertical_bias="0.322" />
+        <TextView
+            android:id="@+id/videoInfoTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text='@{video.channelInfo.name + " - " + video.views + " - " + video.videoPostTime}'
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/verticalOptionsImageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/videoTitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/videoTitleTextView"
+            app:layout_constraintVertical_bias="0.322" />
 
 
-    <ImageView
-        android:id="@+id/verticalOptionsImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/vertical_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videoImageView"
-        app:layout_constraintVertical_bias="0.25" />
+        <ImageView
+            android:id="@+id/verticalOptionsImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/vertical_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoImageView"
+            app:layout_constraintVertical_bias="0.25" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
